@@ -11,13 +11,13 @@ interface StudentDao {
     suspend fun getStudentById(studentId: Int): LiveData<Student>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(student: com.example.assignment4.Student)
+    suspend fun insert(student: Student)
 
     @Update
-    suspend fun update(student: com.example.assignment4.Student)
+    suspend fun update(student: Student)
 
     @Delete
-    suspend fun delete(student: com.example.assignment4.Student)
+    suspend fun delete(student: Student)
 
     @Query("UPDATE Books SET quantity = quantity - 1 WHERE bookID =:bookID and quantity > 0")
     suspend fun borrowBook(bookID: Int)

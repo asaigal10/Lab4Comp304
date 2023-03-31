@@ -3,7 +3,6 @@ package com.example.assignment4.Entity
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.assignment4.Book
 
 
 @Entity(tableName = "Student")

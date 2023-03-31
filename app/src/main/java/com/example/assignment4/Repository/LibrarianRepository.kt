@@ -2,7 +2,7 @@ package com.example.assignment4.Repository
 
 import androidx.lifecycle.LiveData
 import com.example.assignment4.Book
-import com.example.assignment4.Librarian
+import com.example.assignment4.Entity.Librarian
 import com.example.assignment4.dao.LibrarianDao
 
 class LibrarianRepository(private val librarianDao: LibrarianDao) {
@@ -15,7 +15,7 @@ class LibrarianRepository(private val librarianDao: LibrarianDao) {
         librarianDao.insert(librarian)
     }
 
-    suspend fun update(librarian: Librarian) {
+    suspend fun update(librarian: com.example.assignment4.Entity.Librarian) {
         librarianDao.update(librarian)
     }
 

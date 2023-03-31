@@ -1,7 +1,7 @@
 package com.example.assignment4.Repository
 
 import androidx.lifecycle.LiveData
-import com.example.assignment4.Student
+import com.example.assignment4.Entity.Student
 import com.example.assignment4.dao.StudentDao
 
 class StudentRepository(private val studentDao: StudentDao) {

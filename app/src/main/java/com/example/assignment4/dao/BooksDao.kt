@@ -20,7 +20,7 @@ interface BooksDao {
     suspend fun returnBook(bookId: Int)
 
     @Update
-    suspend fun borrowBook(book: Int)
+    suspend fun borrowBook(bookId: Int)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(book: Book)

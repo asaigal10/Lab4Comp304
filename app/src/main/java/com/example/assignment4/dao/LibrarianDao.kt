@@ -12,13 +12,13 @@ interface LibrarianDao {
     fun getLibrarianById(librarianId: Int): LiveData<Librarian>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(librarian: com.example.assignment4.Librarian)
+    suspend fun insert(librarian: Librarian)
 
     @Update
-    suspend fun update(librarian: com.example.assignment4.Librarian)
+    suspend fun update(librarian: Librarian)
 
     @Delete
-    suspend fun delete(librarian: com.example.assignment4.Librarian)
+    suspend fun delete(librarian: Librarian)
 
     @Query("SELECT * FROM Books")
     fun getAllBooks(): LiveData<List<Book>>
