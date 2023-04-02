@@ -3,6 +3,7 @@ package com.example.assignment4.dao
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.assignment4.Book
+import com.example.assignment4.Entity.Books
 
 @Dao
 interface BooksDao {
@@ -23,10 +24,13 @@ interface BooksDao {
     suspend fun borrowBook(bookId: Int)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(book: Book)
+    suspend fun insert(book: Books)
 
     @Update
     suspend fun update(book: Book)
+
+    @Query("DELETE FROM Books")
+    suspend fun deleteAll()
 
     @Delete
     suspend fun delete(book: Book)

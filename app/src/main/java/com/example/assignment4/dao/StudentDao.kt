@@ -28,6 +28,9 @@ interface StudentDao {
     @Query("SELECT * From Books WHERE bookID = :bookID AND quantity > 0")
     suspend fun getAvailableBookById(bookID: Int): LiveData<Book>
 
+    @Query("DELETE FROM Student")
+    suspend fun deleteAll()
+
     suspend fun borrowBookAddToStudent (studentId: Int, bookID: Int){
         borrowBook(bookID)
         val student = getStudentById(studentId).value ?: throw Exception("Student not found")

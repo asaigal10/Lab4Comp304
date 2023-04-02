@@ -32,6 +32,9 @@ interface LibrarianDao {
     @Update
     suspend fun updateBook(book: Book)
 
+    @Query("DELETE FROM Librarian")
+    suspend fun deleteAll()
+
     @Delete
     suspend fun deleteBook(book: Book)
 }

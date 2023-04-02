@@ -21,15 +21,6 @@
             android:name=".Student"
             android:exported="false" />
         <activity
-            android:name=".LibrarianPage"
-            android:exported="false" />
-        <activity
-            android:name=".BookPage"
-            android:exported="false" />
-        <activity
-            android:name=".StudentPage"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
