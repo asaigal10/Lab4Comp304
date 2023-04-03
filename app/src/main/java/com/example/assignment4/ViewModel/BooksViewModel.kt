@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.assignment4.Book
+import com.example.assignment4.Entity.Books
 import com.example.assignment4.Repository.BooksRepository
 import kotlinx.coroutines.launch
 
@@ -31,19 +32,19 @@ class BooksViewModel (private val booksRepository: BooksRepository) : ViewModel(
         }
     }
 
-    fun insertBook(book: Book) {
+    fun insertBook(book: Books) {
         viewModelScope.launch {
             booksRepository.insert(book)
         }
     }
 
-    fun updateBook(book: Book) {
+    fun updateBook(book: Books) {
         viewModelScope.launch {
             booksRepository.update(book)
         }
     }
 
-    fun deleteBook(book: Book) {
+    fun deleteBook(book: Books) {
         viewModelScope.launch {
             booksRepository.delete(book)
         }

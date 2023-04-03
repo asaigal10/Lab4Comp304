@@ -27,11 +27,11 @@ interface BooksDao {
     suspend fun insert(book: Books)
 
     @Update
-    suspend fun update(book: Book)
+    suspend fun update(book: Books)
 
     @Query("DELETE FROM Books")
     suspend fun deleteAll()
 
     @Delete
-    suspend fun delete(book: Book)
+    suspend fun delete(book: Books)
 }

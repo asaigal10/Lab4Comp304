@@ -2,21 +2,22 @@ package com.example.assignment4.Repository
 
 import androidx.lifecycle.LiveData
 import com.example.assignment4.Book
+import com.example.assignment4.Entity.Books
 import com.example.assignment4.dao.BooksDao
 
 class BooksRepository(private val booksDao: BooksDao) {
 
     val allBooks: LiveData<List<Book>> = booksDao.getAllBooks()
 
-    suspend fun insert(book: Book) {
+    suspend fun insert(book: Books) {
         booksDao.insert(book)
     }
 
-    suspend fun update(book: Book) {
+    suspend fun update(book: Books) {
         booksDao.update(book)
     }
 
-    suspend fun delete(book: Book) {
+    suspend fun delete(book: Books) {
         booksDao.delete(book)
     }
 
